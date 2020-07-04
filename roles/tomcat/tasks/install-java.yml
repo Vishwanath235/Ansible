@@ -1,0 +1,7 @@
+- apt:
+    name: Openjdk-8-jdk
+    state: present
+  when: ansible_distribution == "ubuntu"
+  register: x
+- debug:
+    var: x.stdout

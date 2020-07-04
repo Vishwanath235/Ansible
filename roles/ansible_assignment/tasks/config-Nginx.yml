@@ -1,0 +1,3 @@
+- name: copy the content of the web site
+  copy: src=index2.html  dest="/var/www/html/"
+

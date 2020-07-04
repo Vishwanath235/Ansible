@@ -1,0 +1,22 @@
+---
+# tasks file for tomcat
+- name: create file
+  file:
+    path: /tmp/java.txt
+    state: touch
+- name: copy app.prop
+  template:
+    src: app.prop
+    dest: /tmp
+- name: install java
+  include_tasks: install-java.yml
+
+- name: install tomcat
+  include_tasks: install-tomcat.yml
+
+- name: test
+  service:
+    name: cron
+    state: stopped
+  notify: copy handler task
+

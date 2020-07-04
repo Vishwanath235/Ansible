@@ -1,0 +1,13 @@
+- hosts: dev
+  roles:
+    - apache
+  tasks:
+    - debug:
+        msg: " apache installed"
+
+- hosts: prod
+  roles:
+    - nginx
+  tasks:
+    - debug:
+        msg: " nginx installed"

@@ -1,0 +1,7 @@
+---
+  - name: configure apache server
+    become: yes
+    copy: src=index.html dest=/var/www/html/
+    notify:
+      - restart apache2 service
+      - install java

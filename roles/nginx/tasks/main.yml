@@ -1,0 +1,10 @@
+---
+# tasks file for nginx
+- name: install nginx
+  include_tasks: install-nginx.yml
+
+- name: configure nginx
+  include_tasks: config-nginx.yml
+
+- name: service nginx server
+  include_tasks: service-nginx.yml

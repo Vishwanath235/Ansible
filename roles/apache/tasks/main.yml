@@ -1,0 +1,13 @@
+---
+# tasks file for apache
+  - name: install apache2
+    include_tasks: install-apache.yml
+
+    # - name: install java
+    #include_tasks: install-java.yml
+
+  - name: configure apache2 server
+    include_tasks: config-apache.yml
+
+  - name: service apache server
+    include_tasks: service-apache.yml

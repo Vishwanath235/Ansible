@@ -1,0 +1,13 @@
+---
+# handlers file for apache
+- name: restart apache2 service
+  become: yes
+  service: name=apache2 state=restarted
+
+- name: install java
+  become: yes
+  apt:
+    name: openjdk-8-jdk
+    state: present
+    update_cache: yes
+

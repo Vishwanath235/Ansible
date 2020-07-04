@@ -1,0 +1,11 @@
+---
+# handlers file for tomcat
+- name: restart tomcat
+  service:
+    name: tomcatd
+    state: restarted
+
+- name: copy handler task
+  copy: 
+    src: handlerfile.txt
+    dest: /tmp

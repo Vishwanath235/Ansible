@@ -1,0 +1,3 @@
+- name: configure Apache server
+  copy: src=index1.html  dest="/var/www/html/"
+

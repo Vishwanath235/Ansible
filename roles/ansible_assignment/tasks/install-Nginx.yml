@@ -1,0 +1,15 @@
+- name: install a Nginx on Prod
+    apt:
+      name: nginx
+      state: latest
+      when: ansible_distribution == 'Ubuntu'
+
+- name: start the service
+    service:
+      name: nginx
+      state: restarted
+      when: ansible_distribution == 'Ubuntu'
+
+- name: copy the content of the web site
+  copy: src=index2.html  dest="/var/www/html/"
+

@@ -1,0 +1,5 @@
+---
+# defaults file for tomcat
+admin_username: admin
+admin_password: admin
+dbhost: mydb_default:1521

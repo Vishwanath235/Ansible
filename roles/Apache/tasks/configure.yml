@@ -1,0 +1,5 @@
+---
+  - name: apache2.conf file
+    become: yes
+    copy: src=index.html dest=/var/www/html
+    

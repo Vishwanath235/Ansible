@@ -1,0 +1,8 @@
+---
+  - name: start apache services
+    become: yes
+    service:
+      name: apache2
+      state: started
+    notify:
+      - install java

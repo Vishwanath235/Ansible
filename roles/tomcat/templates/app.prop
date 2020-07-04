@@ -1,0 +1,4 @@
+hostname: {{ ansible_nodename }}
+hostip: {{ ansible_default_ipv4.address }}
+mydb: {{ dbhost }}
+
